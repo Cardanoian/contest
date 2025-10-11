@@ -45,21 +45,15 @@ else
     exit 1
 fi
 
-# Nginx 설정 파일 생성
+# Nginx 설정 파일 생성 (HTTP만 사용)
 echo "🔧 Nginx 설정 파일 생성 중..."
 cat > contest.gbeai.net.conf << 'EOF'
-# HTTPS 서버 블록
+# HTTP 서버 블록 (Certbot이 나중에 HTTPS 설정 추가)
 server {
-    listen 443 ssl;
+    listen 80;
     server_name contest.gbeai.net;
     root /var/www/contest.gbeai.net;
     index index.html;
-    
-    # SSL 인증서 경로 (Certbot이 관리)
-    ssl_certificate /etc/letsencrypt/live/contest.gbeai.net/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/contest.gbeai.net/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
     # SPA 라우팅을 위한 설정
     location / {
@@ -77,16 +71,6 @@ server {
     gzip_vary on;
     gzip_min_length 1024;
     gzip_types text/plain text/css text/xml text/javascript application/javascript application/xml+rss application/json;
-}
-
-# HTTP → HTTPS 리다이렉트 서버 블록
-server {
-    listen 80;
-    server_name contest.gbeai.net;
-    
-    location / {
-        return 301 https://$host$request_uri;
-    }
 }
 EOF
 
@@ -123,10 +107,21 @@ else
     exit 1
 fi
 
+# Nginx 재시작 (HTTP 설정 적용)
+echo "🔄 Nginx 서비스 재시작 중..."
+if sudo systemctl restart nginx; then
+    echo "✅ Nginx 재시작 성공 (HTTP 모드)"
+else
+    echo "❌ Nginx 재시작 실패. 수동으로 확인해주세요."
+    exit 1
+fi
+
 # SSL 인증서 확인 및 설정
 echo "🔐 SSL 인증서 확인 중..."
 if [ -f "/etc/letsencrypt/live/contest.gbeai.net/fullchain.pem" ]; then
     echo "✅ SSL 인증서가 이미 존재합니다."
+    echo "🔄 Certbot으로 nginx 설정 업데이트 중..."
+    sudo certbot --nginx -d contest.gbeai.net --non-interactive --agree-tos --email gbeai@sc.gyo6.net --reinstall
 else
     echo "📜 SSL 인증서가 없습니다. Let's Encrypt로 생성을 시도합니다..."
     
@@ -142,24 +137,18 @@ else
     sudo ufw allow 80 2>/dev/null || true
     sudo ufw allow 443 2>/dev/null || true
     
-    # SSL 인증서 생성 시도
-    echo "🔐 SSL 인증서 생성 중..."
+    # SSL 인증서 생성 (Certbot이 자동으로 HTTPS 설정 추가)
+    echo "🔐 SSL 인증서 생성 및 HTTPS 설정 중..."
     if sudo certbot --nginx -d contest.gbeai.net --non-interactive --agree-tos --email gbeai@sc.gyo6.net; then
-        echo "✅ SSL 인증서 생성 성공!"
+        echo "✅ SSL 인증서 생성 및 HTTPS 설정 완료!"
+        echo "✅ Certbot이 자동으로 HTTP → HTTPS 리다이렉트를 설정했습니다."
     else
         echo "⚠️  SSL 인증서 자동 생성에 실패했습니다."
         echo "   수동으로 다음 명령어를 실행해주세요:"
         echo "   sudo certbot --nginx -d contest.gbeai.net"
+        echo ""
+        echo "   현재 HTTP로는 접속 가능합니다: http://contest.gbeai.net"
     fi
-fi
-
-# Nginx 재시작
-echo "🔄 Nginx 서비스 재시작 중..."
-if sudo systemctl restart nginx; then
-    echo "✅ Nginx 재시작 성공"
-else
-    echo "❌ Nginx 재시작 실패. 수동으로 확인해주세요."
-    exit 1
 fi
 
 echo ""
