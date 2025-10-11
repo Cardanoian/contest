@@ -1,0 +1,276 @@
+[
+  {
+    "id": 1,
+    "award": "대상",
+    "programName": "오늘의 미션",
+    "creator": {
+      "name": "서동성",
+      "affiliation": "(경북)옥계동부초등학교",
+      "position": "교사"
+    },
+    "links": {
+      "교사용": "https://todaymission-school.vercel.app/ ",
+      "학생용": "https://todaymission.vercel.app/"
+    },
+    "hashtags": ["#교육", "#AI", "#미션", "#학습관리"]
+  },
+  {
+    "id": 2,
+    "award": "금상",
+    "programName": "글쓰기 분석 및 첨삭 AI (Writing Coach)",
+    "creator": {
+      "name": "이종황",
+      "affiliation": "(경남)김해대청초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://writing-coach.netlify.app" },
+    "hashtags": ["#글쓰기", "#AI", "#첨삭", "#분석"]
+  },
+  {
+    "id": 3,
+    "award": "금상",
+    "programName": "온글",
+    "creator": {
+      "name": "이주영",
+      "affiliation": "(광주)광주도평초등학교",
+      "position": "교사"
+    },
+    "links": {
+      "교사용": "https://example.com/ongeul",
+      "학생용": "https://example.com/ongeul"
+    },
+    "hashtags": ["#글쓰기", "#AI", "#교육", "#학습"]
+  },
+  {
+    "id": 4,
+    "award": "은상",
+    "programName": "도전! 꿈 성취 학교장 인증제(with AI)",
+    "creator": {
+      "name": "박희찬",
+      "affiliation": "(경북)풍천풍서초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://challenge.choni.kr/" },
+    "hashtags": ["#교육", "#AI", "#인증", "#목표달성"]
+  },
+  {
+    "id": 5,
+    "award": "은상",
+    "programName": "AI 회복적 서클 도우미",
+    "creator": {
+      "name": "류지용",
+      "affiliation": "(세종)반곡초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://ai-restorative-circle-app.vercel.app/" },
+    "hashtags": ["#AI", "#상담", "#회복적정의", "#교육"]
+  },
+  {
+    "id": 6,
+    "award": "은상",
+    "programName": "교과그림이야기 ChatBot",
+    "creator": {
+      "name": "김건오",
+      "affiliation": "(경남)호계중학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://chatbot-60534420434.us-west1.run.app/" },
+    "hashtags": ["#챗봇", "#AI", "#교과", "#스토리텔링"]
+  },
+  {
+    "id": 7,
+    "award": "동상",
+    "programName": "나의 영어 학습 파트너 ReadBit",
+    "creator": {
+      "name": "이조은",
+      "affiliation": "(경기)남양주양지초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://example.com/readbit" },
+    "hashtags": ["#영어", "#AI", "#학습", "#읽기"]
+  },
+  {
+    "id": 8,
+    "award": "동상",
+    "programName": "초등 AI 질문 탐구보고서 생성기",
+    "creator": {
+      "name": "이효정",
+      "affiliation": "(경북)포항제철초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://question-generate.netlify.app/" },
+    "hashtags": ["#AI", "#탐구", "#보고서", "#질문"]
+  },
+  {
+    "id": 9,
+    "award": "동상",
+    "programName": "AI 기반 루브릭 생성 및 자동 평가 시스템",
+    "creator": {
+      "name": "이성근",
+      "affiliation": "(경북)화북초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://ai-class-final-ef1c7.web.app/" },
+    "hashtags": ["#AI", "#평가", "#루브릭", "#자동화"]
+  },
+  {
+    "id": 10,
+    "award": "동상",
+    "programName": "수학 문장제 완전 정복",
+    "creator": {
+      "name": "차주혁",
+      "affiliation": "(경북)구미봉곡초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://mathproblem-six.vercel.app/" },
+    "hashtags": ["#수학", "#AI", "#문장제", "#학습"]
+  },
+  {
+    "id": 11,
+    "award": "동상",
+    "programName": "영작문 분석기 AI",
+    "creator": {
+      "name": "김성엽",
+      "affiliation": "(경북)사동고등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://eng-ai.vercel.app/" },
+    "hashtags": ["#영어", "#AI", "#작문", "#분석"]
+  },
+  {
+    "id": 12,
+    "award": "동상",
+    "programName": "대한민국 경제 발전사 주식 투자 게임",
+    "creator": {
+      "name": "이병민",
+      "affiliation": "(경북)구미봉곡초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://economy-game.netlify.app" },
+    "hashtags": ["#경제", "#게임", "#주식", "#역사"]
+  },
+  {
+    "id": 13,
+    "award": "장려상",
+    "programName": "찰칵 맞춤법 검사기",
+    "creator": {
+      "name": "배용열",
+      "affiliation": "(경북)상리초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://yongyeol-ocrspellcheck.hf.space/" },
+    "hashtags": ["#맞춤법", "#AI", "#글쓰기", "#검사"]
+  },
+  {
+    "id": 14,
+    "award": "장려상",
+    "programName": "인공지능 그림 동화책",
+    "creator": {
+      "name": "유인근",
+      "affiliation": "(인천)도담초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://picbook-service.netlify.app/" },
+    "hashtags": ["#AI", "#동화", "#그림", "#창작"]
+  },
+  {
+    "id": 15,
+    "award": "장려상",
+    "programName": "학생 정서 모니터링 AI 저널",
+    "creator": {
+      "name": "지윤호",
+      "affiliation": "(서울)경문고등학교",
+      "position": "교사"
+    },
+    "links": {
+      "접속하기": "https://unono915.github.io/Student-Emotion-Monitoring/"
+    },
+    "hashtags": ["#AI", "#정서", "#모니터링", "#저널"]
+  },
+  {
+    "id": 16,
+    "award": "장려상",
+    "programName": "입시톡",
+    "creator": {
+      "name": "조지훈",
+      "affiliation": "(경북)영동중학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://ipsitalk.vercel.app/" },
+    "hashtags": ["#입시", "#AI", "#상담", "#진로"]
+  },
+  {
+    "id": 17,
+    "award": "장려상",
+    "programName": "AI 글쓰기 첨삭 지도 앱 기획서",
+    "creator": {
+      "name": "권진혁",
+      "affiliation": "(대구)시지초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://writing-app.streamlit.app/" },
+    "hashtags": ["#글쓰기", "#AI", "#첨삭", "#지도"]
+  },
+  {
+    "id": 18,
+    "award": "장려상",
+    "programName": "AI 온기 피드백: 따뜻한 칭찬과 성장의 조언을 위한 AI 문장 생성기",
+    "creator": {
+      "name": "권동신",
+      "affiliation": "(경북)아천초등학교",
+      "position": "교사"
+    },
+    "links": {
+      "접속하기": "https://script.google.com/macros/s/AKfycbyUbMlcKTtqZA-8E_JpU5Er2qQOW20wKv2OdUMNa0C5yBWsg82CRQWGMzmvPArTBp3sqg/exec"
+    },
+    "hashtags": ["#AI", "#피드백", "#칭찬", "#성장"]
+  },
+  {
+    "id": 19,
+    "award": "장려상",
+    "programName": "scitalk(사이언스톡)",
+    "creator": {
+      "name": "신채영",
+      "affiliation": "(경북대학교)생물교육과",
+      "position": "대학생"
+    },
+    "links": { "접속하기": "https://scitalk.streamlit.app/" },
+    "hashtags": ["#과학", "#AI", "#토론", "#교육"]
+  },
+  {
+    "id": 20,
+    "award": "장려상",
+    "programName": "classmate",
+    "creator": {
+      "name": "양윤직",
+      "affiliation": "(경북)경북소프트웨어마이스터고등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://classroomate.netlify.app/" },
+    "hashtags": ["#AI", "#학급관리", "#교육", "#협업"]
+  },
+  {
+    "id": 21,
+    "award": "장려상",
+    "programName": "동물재능을 활용한 나의 미래 재능검사기",
+    "creator": {
+      "name": "정훈탁",
+      "affiliation": "(경북)현곡초등학교",
+      "position": "교사"
+    },
+    "links": { "접속하기": "https://animal-talent.vercel.app" },
+    "hashtags": ["#진로", "#AI", "#재능", "#검사"]
+  },
+  {
+    "id": 22,
+    "award": "장려상",
+    "programName": "Go등학교 길잡이",
+    "creator": {
+      "name": "신현정",
+      "affiliation": "(숙명여자대학교)교육학부",
+      "position": "대학생"
+    },
+    "links": { "접속하기": "https://go-highschool.netlify.app" },
+    "hashtags": ["#진로", "#AI", "#길잡이", "#교육"]
+  }
+]
