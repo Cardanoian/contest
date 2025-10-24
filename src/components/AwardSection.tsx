@@ -9,7 +9,7 @@ interface Winner {
     affiliation: string;
     position: string;
   };
-  links: { 교사용?: string; 학생용?: string; 접속하기?: string };
+  links?: { 교사용?: string; 학생용?: string; 접속하기?: string };
   hashtags: string[];
 }
 

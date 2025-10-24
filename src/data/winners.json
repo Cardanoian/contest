@@ -36,8 +36,8 @@
       "position": "교사"
     },
     "links": {
-      "교사용": "https://example.com/ongeul",
-      "학생용": "https://example.com/ongeul"
+      "교사용": "https://essay.gbeai.net",
+      "학생용": "https://essay.gbeai.net/a_dist/assignment/XOWvZSjW2R"
     },
     "hashtags": ["#글쓰기", "#AI", "#교육", "#학습"]
   },
@@ -86,7 +86,6 @@
       "affiliation": "(경기)남양주양지초등학교",
       "position": "교사"
     },
-    "links": { "접속하기": "https://example.com/readbit" },
     "hashtags": ["#영어", "#AI", "#학습", "#읽기"]
   },
   {

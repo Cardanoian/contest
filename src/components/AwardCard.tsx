@@ -9,7 +9,7 @@ interface Winner {
     affiliation: string;
     position: string;
   };
-  links: { 교사용?: string; 학생용?: string; 접속하기?: string };
+  links?: { 교사용?: string; 학생용?: string; 접속하기?: string };
   hashtags: string[];
 }
 
@@ -88,18 +88,24 @@ export function AwardCard({ winner }: AwardCardProps) {
 
         {/* 링크 버튼들 */}
         <div className='flex flex-wrap gap-2 mt-4'>
-          {Object.entries(winner.links).map(([label, url]) => (
-            <a
-              key={label}
-              href={url}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium'
-            >
-              {label}
-              <ExternalLink className='h-3 w-3' />
-            </a>
-          ))}
+          {winner.links ? (
+            Object.entries(winner.links).map(([label, url]) => (
+              <a
+                key={label}
+                href={url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium'
+              >
+                {label}
+                <ExternalLink className='h-3 w-3' />
+              </a>
+            ))
+          ) : (
+            <span className='inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-gray-400 text-white opacity-50 cursor-not-allowed text-sm font-medium'>
+              접속불가
+            </span>
+          )}
         </div>
       </div>
     </div>
