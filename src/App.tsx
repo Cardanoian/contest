@@ -14,9 +14,11 @@ interface Winner {
     affiliation: string;
     position: string;
   };
-  links: { 교사용?: string; 학생용?: string; 접속하기?: string };
+  links?: { 교사용?: string; 학생용?: string; 접속하기?: string };
   hashtags: string[];
 }
+
+const awardOrder = ['대상', '금상', '은상', '동상', '장려상'];
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -41,7 +43,6 @@ function App() {
   }, [searchQuery, winners]);
 
   // 상별로 그룹화
-  const awardOrder = ['대상', '금상', '은상', '동상', '장려상'];
   const groupedWinners = useMemo(() => {
     return awardOrder.map((award) => ({
       award,
